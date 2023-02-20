@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<div>
+    Home <a href="{{ url_for('registered') }}">Registered Students</a> 
+</div>
+<h1>Register</h1>
+{% endblock %}
+
+{% block body %}
+<h2>
+    Use the following form to register for a student organization 
+    <div>
+        <form method = 'post'>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <!-- <label for="org">Organization</label><br>
+            <input type="text" id="org" name="org"> -->
+
+            <label for = "org">Organization</label><br>
+            <select id="org" name="org">
+                <option value="option1">option1</option>
+                <option value="option2">option2</option>
+                <option value="option3">option3</option>
+                <option value="option4">option4</option>
+                <option value="option5">option5</option>
+            </select>
+
+            <label for="reg"></label><br>
+            <input type="submit" id ="reg" name ="reg">
+        </form>
+    </div>
+</h2> 
+{% endblock %}
+

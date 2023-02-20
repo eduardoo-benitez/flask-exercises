@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+<div>
+    <a href="{{ url_for('register') }}">Home</a> Registered Students
+</div>
+<h1>Registered Students</h1>
+{% endblock %}
+
+{% block body %}
+<h2>
+    The following students have registered for student organizations:
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Organization</th>
+        </tr>
+        {% for student in reg %}
+            <tr>
+                <td>{{ student }}</td>
+                <td>{{ reg[student] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</h2>
+{% endblock %}
+
